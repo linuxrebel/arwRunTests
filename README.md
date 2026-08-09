@@ -103,6 +103,16 @@ files into place. Install agentRW first — see
 git clone https://github.com/linuxrebel/arwRunTests
 ```
 
+Or, without git: download the **Source code (zip)** from the
+[Releases](https://github.com/linuxrebel/arwRunTests/releases) page and unzip it. It
+contains everything the plugin needs. The folder it unpacks to is named for the
+tag — `arwRunTests-0.1.0` rather than `arwRunTests` — so adjust the paths below to match.
+
+> **Do not unzip it straight into `tools/`.** A plugin has to sit exactly two
+> levels down, at `tools/<owner>/<name>/`. One level too shallow and it is
+> skipped in silence — `/plugins` reports nothing registered and says nothing
+> about why. Copy the two files as shown below instead.
+
 ### Linux and macOS
 
 agentRW installs to `/opt/agentRW`, which is owned by root, so copying a plugin
