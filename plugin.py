@@ -173,8 +173,8 @@ def _regressions(before: Dict[str, str], after: Dict[str, str]) -> Dict[str, Any
 
 
 def run_tests_tool(path: str = "", k: str = "") -> Dict[str, Any]:
-    """Run the pytest suite and return pass/fail counts and the first failures.
-    path narrows to a file or directory, k to a name expression."""
+    """Run pytest. Returns pass/fail counts and the first failures.
+    path narrows to a file or dir, k to a name expression."""
     result = _run(path, k)
     if "error" in result:
         return result
